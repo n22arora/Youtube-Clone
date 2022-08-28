@@ -1,5 +1,6 @@
 import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 import { logo } from '../utils/constants';
 import SearchBar from './SearchBar';
@@ -13,6 +14,12 @@ const Navbar = () => (
 
         <Link to ="/" style={{ display : 'flex', alignItems: 'center' }}>
             <img src={logo} alt="logo" height={45} />
+            <Typography variant="h4"
+            fontWeight="bold" ml={2} sx={{
+                color:'white'
+            }}>
+                <span style={{ color: 'white' }}>Binge</span><span style={{ color: '#dd2222' }}>Today</span>
+            </Typography>
         </Link>
 
         <SearchBar />
